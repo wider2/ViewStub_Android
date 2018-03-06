@@ -33,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
+                    .setReorderingAllowed(true)
                     .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN)
-                    .add(R.id.home_fragment_container, new HomeFragment(), HomeFragment.class.getName())
+                    .replace(R.id.home_fragment_container, new HomeFragment(), HomeFragment.class.getName())
+                    .addToBackStack(null)
                     .commit();
         }
 

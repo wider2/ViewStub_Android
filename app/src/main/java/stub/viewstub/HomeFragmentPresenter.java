@@ -32,7 +32,7 @@ public class HomeFragmentPresenter {
     public void getPresenterMethod(final String query) {
         int r = new Random().nextInt(999);
         try {
-            //here we download something
+            //here we download something useful
 
             mainView.refreshResult("" + r);
 
